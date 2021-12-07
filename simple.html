@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		.required{
+		color:red;
+	}
+	table{
+		border-spacing: 20px;
+	}
+	input {
+		box-sizing: border-box;
+		height: 40;
+		width: 10;
+  	}
+	</style>
+</head>
+<body>
+	<center>
+	
+	<form>
+		<fieldset>
+		<legend><h3>Login</h3></legend>
+		<table>
+			<tr>
+				<td align="right">
+					Name:
+				</td>
+				<td>
+					<input type='text' name=''>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Email:<span aria-hidden='true' class='required'>*</span>
+				</td>
+				<td>
+					<input type='email' name=''>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Phone number:<span aria-hidden='true' class='required'>*</span>
+				</td>
+				<td>
+					<input type="Phone" name=''>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Country:
+				</td>
+				<td>
+					<select required>
+					<option>Select</option>
+					<option value="America">America</option>
+					<option value="India">India</option>
+					<option value="Russia">Russia</option>
+					<option value='Singapore'>Singapore</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Gender:<span aria-hidden='true' class='required'>*</span>
+				</td>
+				<td>
+					<input type="radio" name='Gender'>Male
+					<input type='radio' name='Gender'>Female
+					<input type="radio" name='Gender'>Others
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Your Interests:
+				</td>
+				<td>
+					<input type="checkbox" name="Your Interests">Cricket
+					<input type='checkbox' name='Your Interests'>Tennis
+					<input type="checkbox" name="Your Interests">Kabadi
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Address:<span aria-hidden='true' class='required'>*</span>
+				</td>
+				<td>
+					<textarea id='Address'></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					
+				</td>
+				<td>
+					<button>Login</button>
+				</td>
+			</tr>
+		</table>
+		<p>Not registered?<a href='#'>Create an account</p>
+		</fieldset>
+	</form><br><br>
+	</center>
+</body>
+</html>
