@@ -39,5 +39,23 @@
 				}
 			}
 		</script>
+		<button onclick='getLocation()'>Track location</button>
+		<p id='demo'></p>
+
+		<script type="text/javascript">
+			var x=document.getElementById("demo");
+			function getLocation(){
+				if(navigator.geolocation){
+					navigator.geolocation.watchPosition(showPosition);
+				}
+				else{
+					x.innerHTML='Your browser donot suppert geolocation.';
+				}
+			}
+			function showPosition(position){
+				x.innerHTML='Longitide: '+position.coords.longitude+'<br>Latitude: '+position.coords.latitude;
+			}
+		</script>
+
 	</body>
 </html>
