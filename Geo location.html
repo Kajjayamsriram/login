@@ -12,7 +12,7 @@
 			var x=document.getElementById('loca');
 			function getLocation(){
 				if(navigator.geolocation){
-					navigator.geolocation.getCurrentPosition(showPosition);
+					navigator.geolocation.getCurrentPosition(showPosition,showError);
 				}else{
 					x.innerHTML='geolocation is not supported in your browser.';
 
@@ -21,6 +21,22 @@
 			function showPosition(position) {
 				x.innerHTML='Latitude: '+position.coords.latitude+"<br>Longitude: "+position.coords.longitude;
 				// body...
+			}
+			function showError(error){
+				switch(error.code){
+					case error.PERMISSION_DENIED:
+					x.innerHTML='User denied the request for location'
+					break;
+					case error.PERMISSION_UNAVAILABLE:
+					x.innerHTML='Lacotion information is unavilable'
+					break;
+					case error.TIMEOUT:
+					x.innerHTML='Request to get user location is timed out'
+					break;
+					case error.UNKNOWN_ERROR:
+					x.innerHTML='An unknown error occurred'
+					break;
+				}
 			}
 		</script>
 	</body>
