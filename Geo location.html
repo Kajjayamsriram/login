@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>canvas</title>
+	<body>
+		<p>click button to get your current co-ordinates</p>
+		<button onclick='getLocation()'>Location</button>
+		<p id='loca'></p>
+		<script type="text/javascript">
+			var x=document.getElemntById('loca');
+			function getLocation(){
+				if(navigator.geolocation){
+					navigator.geolocation.getCurrentPosition(showPosition);
+					else{
+						x.innerHTML='geolocation is not supported in your browser.';
+					}
+				}
+			}
+			function showPosition(position) {
+				x.innerHTML='Latitude: '+position.coords.latitude+"<br>Longitude: "+position.coords.longitude;
+				// body...
+			}
+		</script>
+	</body>
+</html>
