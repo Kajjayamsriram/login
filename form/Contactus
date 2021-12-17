@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+	<style>
+	.required{color: red;}
+	</style>
+</head>
+<body>
+	<center>
+	<form method="post" enctype="multipart/form-data" action="form.php">
+		<fieldset>
+		<legend><h3>Contact us</h3></legend>
+		<table>
+			<tr>
+				<td align="right">
+					Name:
+				</td>
+				<td>
+					<input type='text' name='name' style="width: 200px">
+					<span class="required">* <?php echo $nameReq;?></span><br><br>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Email:
+				</td>
+				<td>
+					<input type='email' name='email' style="width: 200px">
+					<span class="required">* <?php echo $emailReq;?></span><br><br>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Phone number:
+				</td>
+				<td>
+					<input type="Phone" name='phonenumber' style="width: 200px">
+					<span class="required">* <?php echo $phonenumberReq;?></span><br><br>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Country:
+				</td>
+				<td>
+					<select style="width: 200px" name="country">
+					<option>Select</option>
+					<option value="America">America</option>
+					<option value="India">India</option>
+					<option value="Russia">Russia</option>
+					<option value='Singapore'>Singapore</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Gender:
+				</td>
+				<td>
+					<input type="radio" name='gender'>Male
+					<input type='radio' name='gender'>Female
+					<input type="radio" name='gender'>Others
+					<span class="required">* <?php echo $genderReq;?></span><br><br>
+				</td>
+
+			</tr>
+			<tr>
+				<td align="right">
+					Comments:
+				</td>
+				<td>
+					<textarea id='Address' style="width: 200px" name="comments"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					
+				</td>
+				<td>
+					<input type="submit" value="Submit" name="submit">
+					<input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+				</td>
+			</tr>
+		</table>
+		</fieldset>
+	</form><br><br>
+	<?php
+	echo "<h3>User Reults:</h3>";
+	echo "<br>";
+	echo $name;
+	echo "<br>";
+	echo $email;
+	echo "<br>";
+	echo $phonenumber;
+	echo "<br>";
+	echo $country;
+	echo "<br>";
+	echo $gender;
+	echo "<br>";
+	echo $comments;
+	echo "<br>";
+	?>
+	</center>
+</body>
+</html>
